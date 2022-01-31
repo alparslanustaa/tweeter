@@ -1,0 +1,26 @@
+.avatar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.avatar img {
+  margin-top: 15px;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-family: "Source Sans Pro", sans-serif;
+  
+}
+
+
+.header {
+  position: relative;
+  height: 400px;
+  margin-top: 120px;
+  background-color: #00d5fa;
+  background-image: url("../images/cubes.png");
+}
+
