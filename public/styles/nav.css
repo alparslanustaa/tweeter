@@ -1,8 +1,7 @@
-
 .title {
   font-family: "Bungee", sans-serif;
-  font-size: 40px;
-  align-self: flex-end;
+  font-size: 50px;
+  align-self:center;
 }
 
 nav {
@@ -15,11 +14,25 @@ nav {
   display: flex;
   padding: 0 1.5em;
   justify-content: space-between;
-  align-items: flex-end;
-  z-index: 1;
 }
 
+
+#arrow {
+  color:red;
+  position: relative;
+  top: -20px;;
+}
+
+#theArrow { 
+  display: flex;
+  justify-content: center;
+}
 
 .newTweet {
+  display: flex;
+  flex-direction: column;
+  display: flex;
   padding: 1em 1.5em;
+
 }
+
