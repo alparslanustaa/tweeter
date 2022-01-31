@@ -1,0 +1,25 @@
+
+.title {
+  font-family: "Bungee", sans-serif;
+  font-size: 40px;
+  align-self: flex-end;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #4056a1;
+  color: white;
+  display: flex;
+  padding: 0 1.5em;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+
+.newTweet {
+  padding: 1em 1.5em;
+}
