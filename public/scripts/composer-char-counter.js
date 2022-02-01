@@ -4,7 +4,7 @@ $(document).ready(function() {
   $("#tweet-text").on("keyup", function () {
     const input = $(this).val().length;
     let remainder = 140 - input;
-    $('form .counter').text(remainder)
+    $('f .counter').text(remainder)
     if (remainder > 0) {
       $(this).parent().find(".counter").text(remainder).removeClass("red");
     } else {
