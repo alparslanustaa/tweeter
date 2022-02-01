@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 #tweet-text {
@@ -41,4 +42,9 @@
   display: flex;
   justify-content:space-between;
 
+}
+
+.red {
+  color: red;
+  font-weight: bold;
 }
