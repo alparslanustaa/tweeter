@@ -9,12 +9,10 @@ const $tweet = $(`<article class="tweet">Hello world</article>`);
 
 
 $(document).ready(function () {
+  $(".error").hide();
   const createTweetElement = function (tweetObject) {
-    let $tweet =
-      /* Your code for creating the tweet element */
-      // ...
-
-      `<article class="tweet">
+    let $tweet = 
+    `<article class="tweet">
       <header class="tweet-header">
         <div>
       <img src=${tweetObject.user.avatars}>
@@ -43,12 +41,12 @@ $(document).ready(function () {
     event.preventDefault();
 
     if ($("#tweet-text").val().length > 140) {
-      $(".error").slideDown("slow").text("Come on try to make it 140 Char!!");
+      $(".error").slideDown("slow").text("Text must be less than or equal to 140 characters");
 
     } else if (!$("#tweet-text").val()) {
       $(".error")
         .slideDown("slow")
-        .text("No empty tweet welcome here!.");
+        .text("Please fill out the field!");
     } else {
       event.preventDefault();
       $(".error").slideUp("slow");
