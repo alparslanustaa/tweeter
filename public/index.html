@@ -21,9 +21,9 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" 
-  integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
-   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -42,22 +42,20 @@
     </div>
   </nav>
 
-    <header class="header">
-      <div class="avatar">
-        <img src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div class="name">
-        <h2>Seyma Usta</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <h4 class="error"><i class="fa fa-exclamation-triangle"></i><span>Error!</span>!<i class="fa fa-exclamation-triangle"></i></h4>
-        <form>
+  <header class="header">
+    <div class="avatar">
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div class="name">
+      <h2>Seyma Usta</h2>
+    </div>
+  </header>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <h4 class="error"> <i class="fas fa-bug"></i><span>Error!</span>! <i class="fas fa-bug"></i></i></h4>
+      <form action="/tweets" method="post" id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="f-counter">
@@ -65,36 +63,10 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-
-      </section>
-
-      <section class="tweets-container">
-        <article class="tweet">
-          <header class="tweet-header">
-            <div>
-              <!-- <img src=""> -->
-              <h4> Title Tweet </h4>
-            </div>
-            <span>
-              @Mrs.Jacobs
-            </span>
-          </header>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, nemo?
-          </div>
-          <footer class="tweet-footer">
-            <span>10 days</span>
-            <div>
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-heart"></i>
-              <i class="fas fa-retweet"></i>
-            </div>
-          </footer>
-        </article>
-
-      </section>
-      
-    </main>
+    </section>
+    <section class="tweets-container">
+    </section>
+  </main>
 </body>
 
 </html>
