@@ -41,22 +41,24 @@
       <div id="theArrow"><i id="arrow" class="fas fa-angle-double-down"></i></div>
     </div>
   </nav>
+  <div class="main-container">
 
-  <header class="header">
-    <div class="avatar">
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div class="name">
-      <h2>Seyma Usta</h2>
-    </div>
-  </header>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    
-    <section class="new-tweet">
-      <h4 class="error"> <i class="fas fa-bug"></i><span>Error!</span>! <i class="fas fa-bug"></i></i></h4>
-      <form action="/tweets" method="post" id="tweet-form">
+    <header class="header">
+      <div class="avatar">
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div class="name">
+        <h2>Seyma Usta</h2>
+      </div>
+
+    </header>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+
+      <section class="new-tweet">
+        <h4 class="error"> <i class="fas fa-bug"></i><span>Error!</span>! <i class="fas fa-bug"></i></i></h4>
+        <form action="/tweets" method="post" id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="f-counter">
@@ -64,10 +66,11 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-    </section>
-    <section class="tweets-container">
-    </section>
-  </main>
+      </section>
+      <section class="tweets-container">
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>
