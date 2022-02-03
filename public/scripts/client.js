@@ -20,7 +20,7 @@ $(document).ready(function () {
         </div>
         <span class="handle">${tweetObject.user.handle}<span>
       </header>
-      <div class="contentTweet">${tweetObject.content.text}</div>
+      <div class="contentTweet">${escape(tweetObject.content.text)}</div>
       <footer class="tweet-footer">
       <span>${timeago.format(tweetObject.created_at)}</span>
         <div>
@@ -79,7 +79,11 @@ $(document).ready(function () {
     }
   };
 
-
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   function loadTweets() {
     $.get("http://localhost:8080/tweets/", function (data) {
