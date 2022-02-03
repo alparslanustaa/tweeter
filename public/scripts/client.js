@@ -9,10 +9,14 @@ const $tweet = $(`<article class="tweet">Hello world</article>`);
 
 
 $(document).ready(function () {
+  //when the page is ready hide the error message from screen!
   $(".error").hide();
+
+  //tweet element function, use escape to check for timeago to format the time & server side scipting .
+
   const createTweetElement = function (tweetObject) {
-    let $tweet = 
-    `<article class="tweet">
+    let $tweet =
+      `<article class="tweet">
       <header class="tweet-header">
         <div>
       <img src=${tweetObject.user.avatars}>
@@ -35,33 +39,41 @@ $(document).ready(function () {
     return $tweet;
   }
 
-
+  // instead of refreshing the page jsut submit form
 
   $("#tweet-form").on("submit", function (event) {
     event.preventDefault();
-
+    
+    //more than 140 char error slide down!
     if ($("#tweet-text").val().length > 140) {
       $(".error").slideDown("slow").text("Text must be less than or equal to 140 characters");
-
+      //empty form error with text
     } else if (!$("#tweet-text").val()) {
       $(".error")
         .slideDown("slow")
         .text("Please fill out the field!");
     } else {
+      //should prevent refresh & submit new tweet to the page!
       event.preventDefault();
+      //error should go away
       $(".error").slideUp("slow");
+      //data to more readable text
       const serialiedData = $(this).serialize();
+      //ajax post method to post the form data.
       $.ajax({
         method: "POST",
         url: "http://localhost:8080/tweets/",
         data: serialiedData,
         success: function (data) {
+          //empty form area after succesfull submit!
           console.log(data)
           $("#tweets-container").empty();
           $("#tweet-form").each(function () {
             this.reset();
           });
+          //should load the tweets
           loadTweets();
+          //should re start counter for char!
           $(".counter").text("140");
         },
       });
@@ -79,12 +91,14 @@ $(document).ready(function () {
     }
   };
 
+  //escape function that prevents and cheks for server side scripting!
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+    //function that loads the tweets to the get route
   function loadTweets() {
     $.get("http://localhost:8080/tweets/", function (data) {
       renderTweets(data);
