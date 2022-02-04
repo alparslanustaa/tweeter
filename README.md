@@ -1,10 +1,18 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. Technologies used HTML, CSS, JS, jQuery, AJAX, Node, Express.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Tweeter Clone Screenshots 
+### Desktop View
 
-## Getting Started
+ !["Screenshot of URLs page"](https://github.com/alparslanustaa/tweeter/blob/master/docs/Screen%20Shot%202022-02-03%20at%207.13.31%20PM.png?raw=true)
+### Mobile / Tablet View
+
+  !["Screenshot of URLs page"](https://github.com/alparslanustaa/tweeter/blob/master/docs/Screen%20Shot%202022-02-03%20at%207.14.01%20PM.png?raw=true)
+### Navigation
+
+  !["Screenshot of URLs page"](https://github.com/alparslanustaa/tweeter/blob/master/docs/Screen%20Shot%202022-02-03%20at%207.14.09%20PM.png?raw=true)
+## How to Run Tweeter Clone
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
 2. Clone your repository onto your local device.
@@ -16,3 +24,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Chance
+- md5
+- Body-Parser
+- Timeago
+
